@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard</title><link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main class="shell wide">
+    <header class="topbar"><div><h1>Dashboard</h1><p id="welcome" class="muted"></p></div><button id="logout" class="danger">Logout</button></header>
+    <section class="panel">
+      <h2>My profile</h2>
+      <form id="profile-form" class="two-col">
+        <label>Name<input name="name" required></label><label>Email<input name="email" type="email" required></label>
+        <button class="primary" type="submit">Save profile</button>
+      </form>
+      <h3>Change password</h3>
+      <form id="password-form" class="two-col">
+        <label>Current password<input name="current_password" type="password" required></label>
+        <label>New password<input name="new_password" type="password" minlength="8" required></label>
+        <button class="primary" type="submit">Change password</button>
+      </form>
+    </section>
+    <section class="panel">
+      <h2>My records</h2>
+      <form id="record-form" class="record-form">
+        <label>Title<input name="title" maxlength="150" required></label>
+        <label>Description<textarea name="description" rows="2"></textarea></label>
+        <button class="primary" type="submit">Add record</button>
+      </form>
+      <div id="records"></div>
+    </section>
+    <p id="message" role="status"></p>
+  </main>
+  <script src="/js/dashboard.js"></script>
+</body></html>

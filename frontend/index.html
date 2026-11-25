@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Management System</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <main class="shell">
+
+        <section class="panel">
+
+            <div class="logo">UM</div>
+
+            <h1>Welcome Back</h1>
+
+            <p class="muted">
+                Manage your account securely and effortlessly.
+            </p>
+
+            <div class="tabs">
+                <button id="show-login" class="active" type="button">
+                    Login
+                </button>
+
+                <button id="show-register" type="button">
+                    Register
+                </button>
+            </div>
+
+            <!-- Login Form -->
+
+            <form id="login-form">
+
+                <label>
+                    Email Address
+
+                    <input
+                        name="email"
+                        type="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Password
+
+                    <input
+                        name="password"
+                        type="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+                </label>
+
+                <button class="primary" type="submit">
+                    Login to Account
+                </button>
+
+            </form>
+
+
+            <!-- Registration Form -->
+
+            <form id="register-form" class="hidden">
+
+                <label>
+                    Full Name
+
+                    <input
+                        name="name"
+                        type="text"
+                        placeholder="Enter your full name"
+                        required
+                        minlength="2"
+                    >
+                </label>
+
+                <label>
+                    Email Address
+
+                    <input
+                        name="email"
+                        type="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Password
+
+                    <input
+                        name="password"
+                        type="password"
+                        placeholder="Create a password (min. 8 characters)"
+                        required
+                        minlength="8"
+                    >
+                </label>
+
+                <button class="primary" type="submit">
+                    Create Account
+                </button>
+
+            </form>
+
+            <p id="message" role="status"></p>
+
+            <div class="footer">
+                Secure User Management System
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="/js/auth.js"></script>
+
+</body>
+</html>
